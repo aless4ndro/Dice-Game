@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Dice-Game is a two-player web game in which the players try to roll a die and obtain a total of 100 points."
+    />
+    <!--OpenGraph-->
+    <meta property="og:title" content="Dice-Game" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://Aless4ndro.github.io/Dice-Game/"
+    />
+
+    <!--End OpenGraph-->
+
+    <!--Ionic CDN CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <!--End Ionic CDN CSS-->
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--End Google Font-->
+    <meta name="robots" content="index follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/jpg" href="dice.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dice-Game</title>
+  </head>
+  <body>
+    <ion-app>
+      <ion-content fullscreen>
+        <ion-grid id="playerTurnColor" class="ion-no-margin">
+          <!--First row-->
+          <ion-row>
+            <ion-col size="12">
+              <ion-button id="startGame" fill="clear" color="dark">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                New Game
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <!--Second row-->
+          <ion-row class="second-row">
+            <ion-col class="player-col" size="12" size-lg="4">
+              <!--Player 1 row-->
+              <ion-row>
+                <!--Player 1 name-->
+                <ion-col class="current-player-display" size="12">
+                  <p id="firstPlayerName" class="players-name">Player 1</p>
+                  <span id="firstPlayerTurn"></span>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <!--Player 1 global score-->
+                <ion-col size="12">
+                  <p id="firstPlayerGlobalScore" class="global-players-score">
+                    0
+                  </p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <!--Player 1 current score-->
+                <ion-col size="12">
+                  <section class="current-number">
+                    <p>Current</p>
+                    <p id="firstPlayerCurrentScore" class="current-score">0</p>
+                  </section>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col size="12" size-lg="4">
+              <!--Dice row-->
+              <ion-row>
+                <ion-col id="dieFace" size="12">
+                  <div class="dice fourth-face">
+                    <div class="column">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <div class="column">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-row>
+                    <ion-col size="12">
+                      <!--Buttons to play-->
+                      <ion-button id="rollDice" fill="clear" color="dark">
+                        <ion-icon
+                          class="center-buttons"
+                          name="reload-outline"
+                        ></ion-icon>
+                        Roll Dice
+                      </ion-button>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col id="hold" size="12">
+                      <ion-button fill="clear" color="dark">
+                        <ion-icon
+                          class="center-buttons"
+                          name="download-outline"
+                        ></ion-icon>
+                        Hold
+                      </ion-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col size="12" size-lg="4">
+              <!--Player 2 row-->
+              <ion-row>
+                <!--Player 2 name-->
+                <ion-col class="current-player-display" size="12">
+                  <p id="secondPlayerName" class="players-name">Player 2</p>
+                  <span id="secondPlayerTurn"></span>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <!--Player 2 global score-->
+                <ion-col size="12">
+                  <p id="secondPlayerGlobalScore" class="global-players-score">
+                    0
+                  </p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <!--Player 2 current score-->
+                <ion-col size="12">
+                  <section class="current-number">
+                    <p>Current</p>
+                    <p id="secondPlayerCurrentScore" class="current-score">0</p>
+                  </section>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+    </ion-app>
+    <!--Ionic CDN JS files-->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <!--End Ionic CDN JS files-->
+    <script defer src="scripts.js"></script>
+
+    <noscript>
+      Please, to play the game, consider turning on JavaScript or using a
+      browser that supports JavaScript.
+    </noscript>
+  </body>
+</html>

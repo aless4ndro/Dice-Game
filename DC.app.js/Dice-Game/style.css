@@ -1,0 +1,188 @@
+html {
+    --ion-font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+  }
+  ion-col {
+    text-align: center;
+  }
+  ion-button {
+    font-size: 1.3em;
+  }
+  ion-modal {
+    text-transform: none;
+  }
+  ion-modal ul {
+    padding: 5px;
+    text-align: justify;
+    margin: auto;
+  }
+  ion-modal li {
+    margin: 8px;
+    line-height: 1.2em;
+  }
+  .players-name {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .global-players-score {
+    color: #f51919;
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  ion-icon {
+    color: #f51919;
+    padding-right: 5px;
+  }
+  .current-number {
+    background-color: #f51919;
+    padding: 5px 0 5px 0;
+    font-size: 1em;
+    border-radius: 5px;
+  }
+  .current-score {
+    color: white;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .dice {
+    box-shadow: 0px 0px 20px 0px #afacac;
+    border-radius: 10px;
+    height: 130px;
+    width: 130px;
+    margin: 15px auto 0 auto;
+    padding: 6px;
+    background-color: #fff;
+  }
+  /*Dice faces*/
+  .dot {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f51919;
+    animation: 300ms ease-out 0s 1 growAndAppear;
+  }
+  /*Die first face*/
+  .first-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*Die second face*/
+  .second-face,
+  .third-face {
+    display: flex;
+    justify-content: space-between;
+  }
+  .second-face .dot:nth-child(2) {
+    align-self: flex-end;
+  }
+  /*Die third face*/
+  
+  .third-face .dot:nth-child(2) {
+    align-self: center;
+  }
+  .third-face .dot:nth-child(3) {
+    align-self: flex-end;
+  }
+  /*Die fourth face*/
+  .fourth-face,
+  .column,
+  .fifth-face {
+    display: flex;
+    justify-content: space-between;
+  }
+  .column {
+    flex-direction: column;
+  }
+  /*Die fifth face*/
+  
+  .fifth-face .column:nth-of-type(2) {
+    justify-content: center;
+  }
+  /*Die sixth face*/
+  
+  
+  /*Dot to indicate whose turn it is*/
+  .player-turn {
+    background-color: #f51919;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .current-player-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .player-1-turn {
+    background: linear-gradient(180deg, #eceaea 50%, #fff 50%);
+  }
+  .player-2-turn {
+    background: linear-gradient(0deg, #eceaea 50%, #fff 50%);
+  }
+  
+  /*Animation Die*/
+  @keyframes growAndAppear {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /*Media query for desktop display*/
+  @media screen and (min-width: 993px) {
+    ion-grid {
+      padding: 30px 20px 20px 20px;
+      height: 100vh;
+    }
+    #startGame {
+      margin-top: 2vh;
+    }
+    ion-button {
+      font-size: 1.3em;
+    }
+    .players-name {
+      margin-top: 13vh;
+      font-size: 4em;
+    }
+    .global-players-score {
+      margin-bottom: 15vh;
+      font-size: 8em;
+    }
+    .current-number {
+      margin: 15vh 7vw auto 7vw;
+      align-items: flex-end;
+      font-size: 1.2em;
+    }
+    .current-score {
+      font-size: 2.5em;
+    }
+    .dice {
+      margin: 20vh auto 0 auto;
+      height: 200px;
+      width: 200px;
+      padding: 20px;
+    }
+    #rollDice {
+      margin-top: 30vh;
+    }
+    .player-turn {
+      margin-top: 15vh;
+    }
+    .player-1-turn {
+      background: linear-gradient(90deg, #eceaea 50%, #fff 50%);
+    }
+    .player-2-turn {
+      background: linear-gradient(-90deg, #eceaea 50%, #fff 50%);
+    }
+  }
+  
